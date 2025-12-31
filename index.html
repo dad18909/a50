@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EE6B56QLED"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EE6B56QLED');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="1:26:59">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/ff813ff/llw/refs/heads/main/po/L0vfCRts.png">
+    <meta name="twitter:url" content="https://ff813ff.github.io/llw/">
+    
+    <!-- 页面标题 -->
+    <title>X Global Dark Web Service Hub</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        /* 半透明重复背景图 - 简单点状图案 */
+        body {
+            background-color: #f5f7fb;
+            background-image: url('https://cloudflareimg.cdn.sn/i/6953b63548874_1767093813.webp');
+            background-size:  400px 400px;
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-position: 0 0;
+            color: #212529;
+            line-height: 1.5;
+            min-height: 100vh;
+            font-size: 16px; /* 设置基础字体大小 */
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* 头部 - 增加上下内边距 */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 0; /* 增加上下内边距 */
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 1.3rem; /* 增大字体大小 */
+            color: #3a86ff;
+        }
+        
+        /* 修改语言选择器为垂直排列并固定在右上角 - 调整位置更靠上 */
+        .language-selector {
+            position: absolute;
+            top: 0px; /* 调整位置，更靠近顶部 */
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 3px; /* 减小间隙 */
+            z-index: 101;
+        }
+        
+        .lang-btn {
+            background: white;
+            border: 1px solid rgba(0,0,0,0.1);
+            padding: 5px 12px; /* 调整内边距 */
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 0.85rem; /* 略微减小字体大小 */
+            transition: all 0.3s ease;
+            width: 80px; /* 减小宽度 */
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .lang-btn:hover {
+            background: rgba(0,0,0,0.03);
+        }
+        
+        .lang-btn.active {
+            background: #3a86ff;
+            color: white;
+            border-color: #3a86ff;
+        }
+        
+        /* 主要内容 */
+        main {
+            padding: 10px 0 25px; /* 增加内边距 */
+        }
+        
+        /* 业务服务部分 */
+        .services-section {
+            margin-bottom: 20px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px; /* 增加间隙 */
+        }
+        
+        /* 业务卡片 - 增大尺寸和字体 */
+        .service-card {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 10px; /* 增加圆角 */
+            padding: 16px 18px; /* 增加内边距 */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 增加阴影 */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border-left: 5px solid #3a86ff; /* 增加边框宽度 */
+            text-decoration: none;
+            color: inherit;
+            min-height: 160px; /* 增加最小高度以适应更多内容 */
+            height: auto;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-3px); /* 增加上移距离 */
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        
+        /* 卡片头部 - 增加尺寸 */
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px; /* 增加间隙 */
+            margin-bottom: 10px; /* 增加间距 */
+        }
+        
+        .service-icon {
+            font-size: 1.8rem; /* 增大图标大小 */
+            width: 50px; /* 增加尺寸 */
+            height: 50px; /* 增加尺寸 */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .service-title {
+            font-size: 1.25rem; /* 增大字体大小 */
+            color: #212529;
+            font-weight: 700;
+            text-shadow: 
+                0 0 2px rgba(255, 255, 255, 0.7),
+                0 0 1px rgba(255, 255, 255, 0.5);
+        }
+        
+        /* 卡片内容 - 增大字体 */
+        .card-content {
+            flex-grow: 1;
+            margin-bottom: 12px; /* 增加间距 */
+        }
+        
+        .service-desc {
+            color: #6c757d;
+            line-height: 1.5; /* 增加行高 */
+            margin-bottom: 10px; /* 增加间距 */
+            font-size: 0.95rem; /* 增大字体大小 */
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* 改为3行 */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px; /* 增加间隙 */
+            margin-top: 5px; /* 增加上边距 */
+        }
+        
+        .feature-tag {
+            background: rgba(0,0,0,0.04);
+            padding: 4px 8px; /* 增加内边距 */
+            border-radius: 12px; /* 增加圆角 */
+            font-size: 0.8rem; /* 稍微减小字体大小以容纳更多标签 */
+            color: #212529;
+            white-space: nowrap;
+        }
+        
+        /* 卡片底部 - 增大尺寸 */
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+        
+        .service-action {
+            color: #3a86ff;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px; /* 增加间隙 */
+            font-size: 0.95rem; /* 增大字体大小 */
+        }
+        
+        .popular-badge {
+            background: #ffbe0b;
+            color: #333;
+            padding: 4px 8px; /* 增加内边距 */
+            border-radius: 12px; /* 增加圆角 */
+            font-size: 0.85rem; /* 增大字体大小 */
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px; /* 增加间隙 */
+        }
+        
+        /* 底部 - 增大尺寸 */
+        footer {
+            background: rgba(33, 37, 41, 0.85);
+            color: white;
+            padding: 25px 0 15px; /* 增加内边距 */
+            margin-top: 25px; /* 增加上边距 */
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 25px; /* 增加间隙 */
+            margin-bottom: 20px; /* 增加间距 */
+        }
+        
+        .footer-about {
+            flex: 1;
+            min-width: 220px; /* 增加最小宽度 */
+        }
+        
+        .footer-logo {
+            font-size: 1.25rem; /* 增大字体大小 */
+            font-weight: 700;
+            margin-bottom: 10px; /* 增加间距 */
+            display: flex;
+            align-items: center;
+            gap: 8px; /* 增加间隙 */
+        }
+        
+        .footer-desc {
+            color: #adb5bd;
+            line-height: 1.6; /* 增加行高 */
+            font-size: 0.95rem; /* 增大字体大小 */
+        }
+        
+        .tech-support {
+            flex: 1;
+            min-width: 220px; /* 增加最小宽度 */
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px; /* 增加圆角 */
+            padding: 20px; /* 增加内边距 */
+        }
+        
+        .tech-title {
+            font-size: 1.25rem; /* 增大字体大小 */
+            margin-bottom: 12px; /* 增加间距 */
+            color: #3a86ff;
+        }
+        
+        .tech-desc {
+            color: #adb5bd;
+            margin-bottom: 15px; /* 增加间距 */
+            line-height: 1.6; /* 增加行高 */
+            font-size: 0.95rem; /* 增大字体大小 */
+        }
+        
+        .contact-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 8px 16px; /* 增加内边距 */
+            border-radius: 20px; /* 增加圆角 */
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px; /* 增加间隙 */
+            text-decoration: none;
+            font-size: 0.95rem; /* 增大字体大小 */
+        }
+        
+        .contact-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 15px; /* 增加内边距 */
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #adb5bd;
+            font-size: 0.9rem; /* 增大字体大小 */
+        }
+        
+        /* 针对430x785尺寸的优化 */
+        @media (max-width: 480px) {
+            body {
+                font-size: 17px; /* 在手机上进一步增加基础字体大小 */
+            }
+            
+            .container {
+                padding: 0 12px;
+            }
+            
+            header {
+                padding: 14px 0; /* 增加上下内边距 */
+            }
+            
+            .logo {
+                font-size: 1.4rem; /* 增大字体大小 */
+            }
+            
+            .language-selector {
+                top: 0px; /* 调整位置 */
+                gap: 2px; /* 进一步减小间隙 */
+            }
+            
+            .lang-btn {
+                width: 75px; /* 减小宽度 */
+                padding: 4px 10px; /* 减小内边距 */
+                font-size: 0.8rem; /* 减小字体大小 */
+            }
+            
+            /* 业务卡片在手机上的优化 */
+            .services-grid {
+                gap: 12px;
+            }
+            
+            .service-card {
+                padding: 14px 16px;
+                min-height: 150px; /* 确保卡片高度合适 */
+                border-left-width: 4px;
+            }
+            
+            .card-header {
+                gap: 10px;
+                margin-bottom: 8px;
+            }
+            
+            .service-icon {
+                width: 48px;
+                height: 48px;
+                font-size: 1.7rem;
+            }
+            
+            .service-title {
+                font-size: 1.2rem;
+            }
+            
+            .service-desc {
+                font-size: 0.9rem;
+                line-height: 1.45;
+                margin-bottom: 8px;
+                -webkit-line-clamp: 3; /* 手机上也显示3行 */
+            }
+            
+            .features {
+                gap: 4px; /* 减小间隙以容纳更多标签 */
+                margin-top: 4px;
+            }
+            
+            .feature-tag {
+                font-size: 0.75rem; /* 减小字体大小以容纳更多标签 */
+                padding: 3px 6px;
+            }
+            
+            .service-action {
+                font-size: 0.9rem;
+                gap: 4px;
+            }
+            
+            .popular-badge {
+                font-size: 0.8rem;
+                padding: 3px 7px;
+            }
+            
+            /* 底部优化 */
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .footer-logo {
+                font-size: 1.2rem;
+            }
+            
+            .footer-desc {
+                font-size: 0.9rem;
+            }
+            
+            .tech-support {
+                padding: 18px;
+            }
+            
+            .tech-title {
+                font-size: 1.2rem;
+            }
+            
+            .tech-desc {
+                font-size: 0.9rem;
+            }
+            
+            .contact-btn {
+                font-size: 0.9rem;
+            }
+            
+            .copyright {
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* 平板和更大屏幕上的优化 */
+        @media (min-width: 481px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+            
+            .service-card {
+                min-height: 165px; /* 增加高度以容纳更多内容 */
+            }
+        }
+        
+        /* 桌面上的优化 */
+        @media (min-width: 769px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .service-card {
+                min-height: 170px;
+            }
+        }
+        
+        /* 大屏幕上的优化 */
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        /* 针对430x785像素屏幕的特殊优化 */
+        @media (max-height: 800px) and (max-width: 480px) {
+            .service-card {
+                min-height: 145px; /* 稍微减小高度以适应小屏幕 */
+                padding: 12px 14px;
+            }
+            
+            .service-desc {
+                -webkit-line-clamp: 3; /* 确保显示三行 */
+            }
+            
+            /* 确保在430x785屏幕上能显示3个卡片 */
+            .services-section {
+                margin-bottom: 15px;
+            }
+            
+            main {
+                padding: 8px 0 20px;
+            }
+            
+            .features {
+                gap: 3px; /* 进一步减小间隙 */
+            }
+            
+            .feature-tag {
+                font-size: 0.7rem; /* 进一步减小字体大小 */
+                padding: 2px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-globe-americas"></i>
+                    <span id="logo-text">Global Dark Web Service Hub</span>
+                </div>
+                
+                <!-- 修改为上下排序的语言选择器 -->
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="en">English</button>
+                    <button class="lang-btn" data-lang="zh">中文</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main>
+        <div class="container">
+            <!-- 直接显示业务服务部分 -->
+            <section class="services-section">
+                <div class="services-grid">
+                    <!-- 暗网资源观影 -->
+                    <a href="https://t.me/+yJmwctnTROo0NTZh" class="service-card cinema" target="_blank" data-service="cinema">
+                        <div class="card-header">
+                            <div class="service-icon" style="background: rgba(58, 134, 255, 0.1); color: #3a86ff;">
+                                <i class="fas fa-film"></i>
+                            </div>
+                            <h3 class="service-title" id="service1-title">Online Cinema</h3>
+                        </div>
+                        
+                        <div class="card-content">
+                            <p class="service-desc" id="service1-desc">
+                                Stream thousands of movies and TV shows in HD and 4K quality. Latest releases, exclusive originals, and classic films from around the world.
+                            </p>
+                            
+                            <div class="features">
+                                <span class="feature-tag" id="feature1-1">HD & 4K Quality</span>
+                                <span class="feature-tag" id="feature1-2">Global Content</span>
+                                <span class="feature-tag" id="feature1-3">Multi-Device</span>
+                                <span class="feature-tag" id="feature1-4">Offline Viewing</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <div class="service-action">
+                                <span id="service1-action">Start Watching Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="popular-badge">
+                                <i class="fas fa-fire"></i>
+                                <span id="popular1">Most Popular</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- 同城约会 -->
+                    <a href="https://t.me/xuu222" class="service-card dating" target="_blank" data-service="dating">
+                        <div class="card-header">
+                            <div class="service-icon" style="background: rgba(255, 0, 110, 0.1); color: #ff006e;">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3 class="service-title" id="service3-title">Local Dating</h3>
+                        </div>
+                        
+                        <div class="card-content">
+                            <p class="service-desc" id="service3-desc">
+                                Connect with interesting people in your city through a safe and verified platform. Advanced matching algorithms and video profiles.
+                            </p>
+                            
+                            <div class="features">
+                                <span class="feature-tag" id="feature3-1">Safe & Verified</span>
+                                <span class="feature-tag" id="feature3-2">Smart Matching</span>
+                                <span class="feature-tag" id="feature3-3">Video Profiles</span>
+                                <span class="feature-tag" id="feature3-4">Group Events</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <div class="service-action">
+                                <span id="service3-action">Find Matches</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="popular-badge">
+                                <i class="fas fa-fire"></i>
+                                <span id="popular3">Most Popular</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- 全球购物 -->
+                    <a href="https://t.me/Merchant2026" class="service-card shopping" target="_blank" data-service="shopping">
+                        <div class="card-header">
+                            <div class="service-icon" style="background: rgba(6, 214, 160, 0.1); color: #06d6a0;">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <h3 class="service-title" id="service2-title">Global Shopping</h3>
+                        </div>
+                        
+                        <div class="card-content">
+                            <p class="service-desc" id="service2-desc">
+                                Global e-commerce platform with free UPS shipping on all orders. Curated selection of products from trusted brands worldwide.
+                            </p>
+                            
+                            <div class="features">
+                                <span class="feature-tag" id="feature2-1">Free UPS Shipping</span>
+                                <span class="feature-tag" id="feature2-2">Global Brands</span>
+                                <span class="feature-tag" id="feature2-3">Secure Payment</span>
+                                <span class="feature-tag" id="feature2-4">Easy Returns</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <div class="service-action">
+                                <span id="service2-action">Start Shopping</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- 广告招商 -->
+                    <a href="https://t.me/FF813" class="service-card advertising" target="_blank" data-service="advertising">
+                        <div class="card-header">
+                            <div class="service-icon" style="background: rgba(131, 56, 236, 0.1); color: #8338ec;">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <h3 class="service-title" id="service4-title">Advertising Solutions</h3>
+                        </div>
+                        
+                        <div class="card-content">
+                            <p class="service-desc" id="service4-desc">
+                                Promote your brand to our global audience with targeted advertising solutions. Detailed analytics and expert support.
+                            </p>
+                            
+                            <div class="features">
+                                <span class="feature-tag" id="feature4-1">Global Audience</span>
+                                <span class="feature-tag" id="feature4-2">Targeted Ads</span>
+                                <span class="feature-tag" id="feature4-3">Detailed Analytics</span>
+                                <span class="feature-tag" id="feature4-4">ROI Tracking</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <div class="service-action">
+                                <span id="service4-action">Advertise With Us</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>Global Dark Web Service Hub</span>
+                    </div>
+                    <p class="footer-desc" id="footer-desc">
+                        Premium digital services platform offering online cinema, local dating, global shopping, and advertising solutions.
+                    </p>
+                </div>
+                
+                <!-- 技术支持合作 -->
+                <div class="tech-support">
+                    <h3 class="tech-title" id="tech-title">Technical Support & Partnership</h3>
+                    <p class="tech-desc" id="tech-desc">
+                        We provide robust technical infrastructure and welcome collaboration opportunities.
+                    </p>
+                    <a href="https://t.me/FF813" class="contact-btn" target="_blank">
+                        <i class="fas fa-handshake"></i>
+                        <span id="contact-btn-text">Explore Partnership</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p id="copyright">© 2023 Global Dark Web Service Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 多语言内容 - 只保留中英文
+        const translations = {
+            en: {
+                logoText: "Global Dark Web Service Hub",
+                // 暗网资源观影
+                service1Title: "Dark Web Online Cinema",
+                service1Desc: "Hundreds of thousands of media files, all free and available for direct viewing.  Includes loli, underage, bestiality, and horror films.",
+                feature1_1: "Child Pornography",
+                feature1_2: "Banned Content",
+                feature1_3: "Supports Downloading",
+                feature1_4: "Free and Fast", // New feature
+                service1Action: "Start watching for free now.",
+                popular1: "Most Popular",
+                
+                // 全球购物
+                service2Title: "Global Dark Web Shopping",
+                service2Desc: "Find treasures here that you can't find on Amazon, Temu, eBay, or Taobao. Free shipping. Curated global products.",
+                feature2_1: "Drugs Firearms",
+                feature2_2: "Sedatives Truth Serum",
+                feature2_3: "Stolen Goods  Smuggled Digital products",
+                feature2_4: "Secure Payment", // New feature
+                service2Action: "Start Shopping",
+                
+                // 同城约会
+                service3Title: "Local In-Person Services",
+                service3Desc: "Connect with attractive women in your city through a safe and reliable platform.  Includes high-class escorts, amateur students, and affordable street-side services.",
+                feature3_1: "Safe and Reliable",
+                feature3_2: "Wide Selection",
+                feature3_3: "Video Profiles",
+                feature3_4: "Group Sessions Available", // New feature
+                service3Action: "Let's start fucking.",
+                popular3: "Most Popular",
+                
+                // 广告招商
+                service4Title: "Advertising Solutions",
+                service4Desc: "Promote your brand to our global audience with targeted advertising solutions. Detailed analytics and expert support.",
+                feature4_1: "Global Audience",
+                feature4_2: "Targeted Ads",
+                feature4_3: "Detailed Analytics",
+                feature4_4: "ROI Tracking", // 新增特点
+                service4Action: "Advertise With Us",
+                
+                // 底部
+                footerDesc: "Global Dark Web Service Hub, providing access to rare films, local escort services and dating, global dark web shopping, and advertising solutions.",
+                techTitle: "Technical Support and Collaboration",
+                techDesc: "We provide a robust technical infrastructure and welcome collaboration opportunities.",
+                contactBtn: "Explore Collaboration Opportunities",
+                copyright: "© 2026 Global Dark Web Service Hub. All rights reserved."
+            },
+            zh: {
+                logoText: "全球暗网服务枢纽",
+                // 暗网资源观影
+                service1Title: "暗网资源观影",
+                service1Desc: "数十万媒体库一切均为免费直接看。萝莉、幼女、人兽、恐怖、的影片。",
+                feature1_1: "儿童色情",
+                feature1_2: "禁播内容",
+                feature1_3: "支持下载",
+                feature1_4: "免费快速", // 新增特点
+                service1Action: "立即开始免费观看",
+                popular1: "最受欢迎",
+                
+                // 全球购物
+                service2Title: "全球暗网购物",
+                service2Desc: "亚马逊、Temu、eBay、淘宝无法找到的商品都在这里，免费送货。精选明星产品。",
+                feature2_1: "毒品、枪支",
+                feature2_2: "迷药、真话水",
+                feature2_3: "赃物、走私货",
+                feature2_4: "安全支付", // 新增特点
+                service2Action: "开始购物",
+                
+                // 同城约会
+                service3Title: "同城上门服务",
+                service3Desc: "通过安全可靠的平台与您所在城市的骚逼深入交流。大圈外围素人学生和物美价廉的街边快餐。",
+                feature3_1: "安全可靠",
+                feature3_2: "任君选择",
+                feature3_3: "视频资料",
+                feature3_4: "组团发射", // 新增特点
+                service3Action: "即刻上门开肏",
+                popular3: "最受欢迎",
+                
+                // 广告招商
+                service4Title: "广告解决方案",
+                service4Desc: "通过定向广告解决方案向我们的全球受众推广您的品牌。详细的分析报告和专家支持。",
+                feature4_1: "全球受众",
+                feature4_2: "定向广告",
+                feature4_3: "详细分析",
+                feature4_4: "投资回报跟踪", // 新增特点
+                service4Action: "与我们合作",
+                
+                // 底部
+                footerDesc: "全球暗网服务枢纽，提供稀缺观影、同城援交约会、全球暗网购物和广告解决方案。",
+                techTitle: "技术支持与合作",
+                techDesc: "我们提供强大的技术基础设施，欢迎合作机会。",
+                contactBtn: "探索合作机会",
+                copyright: "© 2026 全球暗网服务枢纽 版权所有"
+            }
+        };
+
+        // 检测语言 - 只支持中英文
+        function detectLanguage() {
+            const browserLang = navigator.language.split('-')[0];
+            const supportedLangs = ['en', 'zh'];
+            
+            if (supportedLangs.includes(browserLang)) {
+                return browserLang;
+            }
+            
+            const savedLang = localStorage.getItem('preferredLanguage');
+            return savedLang || 'en';
+        }
+
+        // 应用语言
+        function applyLanguage(lang) {
+            const langData = translations[lang];
+            
+            // 更新所有文本内容
+            document.getElementById('logo-text').textContent = langData.logoText;
+            
+            // 更新暗网资源观影内容
+            document.getElementById('service1-title').textContent = langData.service1Title;
+            document.getElementById('service1-desc').textContent = langData.service1Desc;
+            document.getElementById('feature1-1').textContent = langData.feature1_1;
+            document.getElementById('feature1-2').textContent = langData.feature1_2;
+            document.getElementById('feature1-3').textContent = langData.feature1_3;
+            document.getElementById('feature1-4').textContent = langData.feature1_4; // 新增
+            document.getElementById('service1-action').textContent = langData.service1Action;
+            document.getElementById('popular1').textContent = langData.popular1;
+            
+            // 更新全球购物内容
+            document.getElementById('service2-title').textContent = langData.service2Title;
+            document.getElementById('service2-desc').textContent = langData.service2Desc;
+            document.getElementById('feature2-1').textContent = langData.feature2_1;
+            document.getElementById('feature2-2').textContent = langData.feature2_2;
+            document.getElementById('feature2-3').textContent = langData.feature2_3;
+            document.getElementById('feature2-4').textContent = langData.feature2_4; // 新增
+            document.getElementById('service2-action').textContent = langData.service2Action;
+            
+            // 更新同城约会内容
+            document.getElementById('service3-title').textContent = langData.service3Title;
+            document.getElementById('service3-desc').textContent = langData.service3Desc;
+            document.getElementById('feature3-1').textContent = langData.feature3_1;
+            document.getElementById('feature3-2').textContent = langData.feature3_2;
+            document.getElementById('feature3-3').textContent = langData.feature3_3;
+            document.getElementById('feature3-4').textContent = langData.feature3_4; // 新增
+            document.getElementById('service3-action').textContent = langData.service3Action;
+            document.getElementById('popular3').textContent = langData.popular3;
+            
+            // 更新广告解决方案内容
+            document.getElementById('service4-title').textContent = langData.service4Title;
+            document.getElementById('service4-desc').textContent = langData.service4Desc;
+            document.getElementById('feature4-1').textContent = langData.feature4_1;
+            document.getElementById('feature4-2').textContent = langData.feature4_2;
+            document.getElementById('feature4-3').textContent = langData.feature4_3;
+            document.getElementById('feature4-4').textContent = langData.feature4_4; // 新增
+            document.getElementById('service4-action').textContent = langData.service4Action;
+            
+            // 更新底部内容
+            document.getElementById('footer-desc').textContent = langData.footerDesc;
+            document.getElementById('tech-title').textContent = langData.techTitle;
+            document.getElementById('tech-desc').textContent = langData.techDesc;
+            document.getElementById('contact-btn-text').textContent = langData.contactBtn;
+            document.getElementById('copyright').textContent = langData.copyright;
+            
+            // 更新语言按钮状态
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // 保存用户语言选择
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // 页面初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 应用检测到的语言
+            const detectedLang = detectLanguage();
+            applyLanguage(detectedLang);
+            
+            // 添加语言切换事件
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    applyLanguage(lang);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
